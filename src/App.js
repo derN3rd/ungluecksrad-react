@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./App.css";
+import NewUserForm from "./User";
 
 const App = ({ users }) => (
   <div className="App">
@@ -14,6 +15,8 @@ const App = ({ users }) => (
           <li>No Users created</li>
         )}
       </ul>
+      <hr />
+      <NewUserForm />
     </header>
   </div>
 );
