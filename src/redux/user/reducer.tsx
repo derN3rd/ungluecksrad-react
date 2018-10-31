@@ -1,10 +1,13 @@
 import * as t from "./types";
 
-export const initialState = {
+export const initialState: { users: Array<{ id: number; name: string }> } = {
   users: []
 };
 
-export const reducer = (state = initialState, action) => {
+export const reducer = (
+  state = initialState,
+  action: { type: string; payload: { [s: string]: any } }
+) => {
   switch (action.type) {
     case t.ADD:
       return {
