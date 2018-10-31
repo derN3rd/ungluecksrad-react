@@ -11,10 +11,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         users: [
           ...state.users,
-          {
-            id: (state.users[state.users.length - 1] || { id: -1 }).id + 1,
-            name: action.payload.name
-          }
+          { id: state.users.length, name: action.payload.name }
         ]
       };
     case t.EDIT:
